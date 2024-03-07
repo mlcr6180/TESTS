@@ -5,7 +5,6 @@ import net.serenitybdd.annotations.Steps;
 import net.thucydides.core.pages.PageObject;
 
 public class WebSite {
-
     @Steps(shared = true)
     PageObject page;
 

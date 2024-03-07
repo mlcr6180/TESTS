@@ -1,7 +1,7 @@
 package com.test.ec.definitions;
 
-import com.test.ec.steps.login.LoginStep;
-import com.test.ec.steps.validations.ValidationStep;
+import com.test.ec.steps.login.AccionesYAccionistasLoginStep;
+import com.test.ec.steps.validations.AccionesYAccionistasValidationStep;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,36 +9,36 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 import org.junit.Assert;
 
-public class LoginDef {
+public class AccionesYAccionistasLoginDef {
     @Steps(shared = true)
     WebSite url;
 
     @Steps(shared = true)
-    LoginStep login;
+    AccionesYAccionistasLoginStep login;
 
     @Steps(shared = true)
-    ValidationStep validate;
+    AccionesYAccionistasValidationStep validate;
 
     @Given("El usuario navega al sitio web")
     public void userNavigateTo() {
-        url.navegateTo("https://www.saucedemo.com/v1/index.html");
+        url.navegateTo("https://172.20.41.84:8443/WEBPichinchaCom/AsesoresCom/Entorno/Login.aspx");
     }
 
-    @When("Ingresa credenciales validas")
+    @When("Ingresa credenciales correctas")
     public void userLoginWithValidCredentials() {
-        login.typeUsername("standard_user");
-        login.typePassword("secret_sauce");
+        login.typeUsername("jmeras");
+        login.typePassword("Banco10");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar el modulo principal de productos")
+    @Then("La aplicacion deberia mostrar el modulo principal de Acciones y Accionistas")
     public void systemShowProductsModule() {
         Assert.assertTrue(validate.titleIsVisible());
     }
 
-    @When("Ingresa credenciales invalidas")
+    @When("Ingresa credenciales incorrectas")
     public void userLoginWithInvalidCredentials() {
-        login.typeUsername("standard_user");
+        login.typeUsername("jmeras");
         login.typePassword("123456");
         login.clickLogin();
     }

@@ -4,10 +4,10 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
-public class ValidationPage extends PageObject {
-    @FindBy(xpath = "//div[@class='product_label']")
+public class AccionesYAccionistasValidationPage extends PageObject {
+    @FindBy(xpath = "//a[@class=\"dropdown-toggle\"]")
     protected WebElementFacade lbl_product;
 
-    @FindBy(xpath = "//h3[@data-test='error' and text()='Username and password do not match any user in this service']")
+    @FindBy(xpath = "//li[@class='text-black' and text()='PASSWORD INCORRECTO']")
     protected WebElementFacade lbl_errorMessage;
 }
