@@ -7,11 +7,11 @@ import net.thucydides.core.pages.PageObject;
 public class WebSite {
 
     @Steps(shared = true)
-    PageObject swag;
+    PageObject page;
 
-    @Step("Navegar al ")
+    @Step("Navegar al sitio web")
     public void navegateTo(String url) {
-        swag.setDefaultBaseUrl(url);
-        swag.open();
+        page.setDefaultBaseUrl(url);
+        page.open();
     }
 }
