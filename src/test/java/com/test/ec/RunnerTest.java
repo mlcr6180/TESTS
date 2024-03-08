@@ -10,5 +10,5 @@ import org.junit.runner.RunWith;
         glue = "com.test.ec.definitions",
         tags = "@LoginAccionesYAccionistas"
 )
-public class Runner {
+public class RunnerTest {
 }
