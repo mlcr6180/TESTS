@@ -2,6 +2,7 @@ package com.test.ec.definitions;
 
 import com.test.ec.steps.login.AccionesYAccionistasLoginStep;
 import com.test.ec.steps.validations.AccionesYAccionistasValidationStep;
+import com.test.ec.utilities.certifiedSSL.CertifiedSSL;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,6 +15,9 @@ public class AccionesYAccionistasLoginDef {
     WebSite url;
 
     @Steps(shared = true)
+    CertifiedSSL cSSL;
+
+    @Steps(shared = true)
     AccionesYAccionistasLoginStep login;
 
     @Steps(shared = true)
@@ -21,7 +25,8 @@ public class AccionesYAccionistasLoginDef {
 
     @Given("El usuario navega al sitio web")
     public void userNavigateTo() {
-        url.navegateTo("https://172.20.41.84:8443/WEBPichinchaCom/AsesoresCom/Entorno/Login.aspx");
+        url.navegateTo("https://172.20.41.84:8443/AccionesAccionistasBGR/Login/Login.aspx");
+        cSSL.certificateSSL();
     }
 
     @When("Ingresa credenciales correctas")

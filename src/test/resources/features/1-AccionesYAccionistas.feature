@@ -1,4 +1,4 @@
-@Suite @Login
+@Suite @LoginAccionesYAccionistas
 Feature: CP01 - Automatizacion pruebas - Acciones y Accionistas
   Background: Validar el inicio de sesion a la pagina de Acciones y Accionistas
     Given El usuario navega al sitio web
