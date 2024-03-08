@@ -2,7 +2,7 @@ package com.test.ec.definitions;
 
 import com.test.ec.steps.login.AccionesYAccionistasLoginStep;
 import com.test.ec.steps.validations.AccionesYAccionistasValidationStep;
-import com.test.ec.utilities.certifiedSSL.CertifiedSSL;
+import com.test.ec.utilities.sslCertificate.SSLCertified;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,7 +15,7 @@ public class AccionesYAccionistasLoginDef {
     WebSite url;
 
     @Steps(shared = true)
-    CertifiedSSL cSSL;
+    SSLCertified cSSL;
 
     @Steps(shared = true)
     AccionesYAccionistasLoginStep login;

@@ -1,11 +1,11 @@
-package com.test.ec.utilities.certifiedSSL;
+package com.test.ec.utilities.sslCertificate;
 
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
-public class CertifiedSSL extends PageObject {
+public class SSLCertified extends PageObject {
     @FindBy(id = "details-button")
     protected WebElementFacade btn_avanzados;
 
