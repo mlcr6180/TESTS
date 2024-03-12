@@ -1,4 +1,7 @@
 package com.test.ec.pages.login;
 
-public class LogisticaEfectivoLoginPage {
+import net.serenitybdd.core.pages.PageObject;
+import org.openqa.selenium.support.FindBy;
+
+public class LogisticaEfectivoLoginPage extends PageObject {
 }
