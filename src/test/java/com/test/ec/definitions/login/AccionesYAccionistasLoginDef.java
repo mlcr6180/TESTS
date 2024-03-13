@@ -1,7 +1,7 @@
-package com.test.ec.definitions;
+package com.test.ec.definitions.login;
 
-import com.test.ec.steps.login.BalconesLoginStep;
-import com.test.ec.steps.validations.BalconesValidationStep;
+import com.test.ec.steps.login.AccionesYAccionistasLoginStep;
+import com.test.ec.steps.validations.AccionesYAccionistasValidationStep;
 import com.test.ec.utilities.sslCertificate.SSLCertified;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 import org.junit.Assert;
 
-public class BalconesLoginDef {
+public class AccionesYAccionistasLoginDef {
     @Steps(shared = true)
     WebSite url;
 
@@ -18,37 +18,37 @@ public class BalconesLoginDef {
     SSLCertified cSSL;
 
     @Steps(shared = true)
-    BalconesLoginStep login;
+    AccionesYAccionistasLoginStep login;
 
     @Steps(shared = true)
-    BalconesValidationStep validate;
+    AccionesYAccionistasValidationStep validate;
 
-    @Given("El usuario navega al sitio web de Balcones")
+    @Given("El usuario navega al sitio web de Acciones y Accionistas")
     public void userNavegateTo() {
-        url.navegateTo("https://172.20.41.85:8042/WEBPichinchaCom/BalconesCom/Entorno/Escritorio.aspx");
+        url.navegateTo("https://172.20.41.84:8443/AccionesAccionistasBGR/Login/Login.aspx");
         cSSL.certificateSSL();
     }
 
-    @When("Ingresa credenciales correctas de Balcones")
+    @When("Ingresa credenciales correctas de Acciones y Accionistas")
     public void userLoginWithValidCredentials() {
         login.typeUsername("jamaldon");
         login.typePassword("jmaldon9");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar el modulo principal de Balcones")
+    @Then("La aplicacion deberia mostrar el modulo principal de Acciones y Accionistas")
     public void systemShowProductsModule() {
         Assert.assertTrue(validate.titleIsVisible());
     }
 
-    @When("Ingresa credenciales incorrectas de Balcones")
+    @When("Ingresa credenciales incorrectas de Acciones y Accionistas")
     public void userLoginWithInvalidCredentials() {
         login.typeUsername("jamaldon");
         login.typePassword("123456");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar un mensaje de error de Balcones")
+    @Then("La aplicacion deberia mostrar un mensaje de error de Acciones y Accionistas")
     public void systemShowErrorMessage() {
         Assert.assertTrue(validate.errorMessageIsDisplayed());
     }

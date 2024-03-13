@@ -1,4 +1,4 @@
-package com.test.ec.definitions;
+package com.test.ec.definitions.login;
 
 import com.test.ec.steps.login.AdministracionBancaDigitalLoginStep;
 import com.test.ec.steps.validations.AdministracionBancaDigitalValidationStep;

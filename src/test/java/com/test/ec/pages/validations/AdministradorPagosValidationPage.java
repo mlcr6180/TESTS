@@ -8,6 +8,6 @@ public class AdministradorPagosValidationPage extends PageObject {
     @FindBy(xpath = "//a[@class='dropdown-toggle']")
     protected WebElementFacade lbl_product;
 
-    @FindBy(xpath = "//li[contains(@class, 'text-black') and contains(text(), 'PASSWORD INCORRECTO')]")
+    @FindBy(xpath = "//span[contains(@class, 'fa fa-lock')]")
     protected WebElementFacade lbl_errorMessage;
 }

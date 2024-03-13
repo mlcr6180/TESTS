@@ -1,7 +1,7 @@
-package com.test.ec.definitions;
+package com.test.ec.definitions.login;
 
-import com.test.ec.steps.login.ContabilidadLoginStep;
-import com.test.ec.steps.validations.ContabilidadValidationStep;
+import com.test.ec.steps.login.LogisticaEfectivoLoginStep;
+import com.test.ec.steps.validations.LogisticaEfectivoValidationStep;
 import com.test.ec.utilities.sslCertificate.SSLCertified;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 import org.junit.Assert;
 
-public class ContabilidadLoginDef {
+public class LogisticaEfectivoLoginDef {
     @Steps(shared = true)
     WebSite url;
 
@@ -18,37 +18,37 @@ public class ContabilidadLoginDef {
     SSLCertified cSSL;
 
     @Steps(shared = true)
-    ContabilidadLoginStep login;
+    LogisticaEfectivoLoginStep login;
 
     @Steps(shared = true)
-    ContabilidadValidationStep validate;
+    LogisticaEfectivoValidationStep validate;
 
-    @Given("El usuario navega al sitio web de Contabilidad")
-    public void userNabvegateTo() {
-        url.navegateTo("https://172.20.41.84:8443/WebPichinchaCom/ContabilidadCom/Entorno/Login.aspx");
+    @Given("El usuario navega al sitio web de Logistica Efectivo")
+    public void userNavegateTo() {
+        url.navegateTo("https://172.20.41.84:8443/LogisticaEfectivoBGR/Login/Login.aspx");
         cSSL.certificateSSL();
     }
 
-    @When("Ingresa credenciales correctas de Contabilidad")
+    @When("Ingresa credenciales correctas de Logistica Efectivo")
     public void userLoginWithValidCredentials() {
         login.typeUsername("jamaldon");
         login.typePassword("jmaldon9");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar el modulo principal de Contabilidad")
+    @Then("La aplicacion deberia mostrar el modulo principal de Logistica Efectivo")
     public void systemShowProductsModule() {
         Assert.assertTrue(validate.titleIsVisible());
     }
 
-    @When("Ingresa credenciales incorrectas de Contabilidad")
+    @When("Ingresa credenciales incorrectas de Logistica Efectivo")
     public void userLoginWithInvalidCredentials() {
         login.typeUsername("jamaldon");
         login.typePassword("123456");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar un mensaje de error de Contabilidad")
+    @Then("La aplicacion deberia mostrar un mensaje de error de Logistica Efectivo")
     public void systemShowErrorMessage() {
         Assert.assertTrue(validate.errorMessageIsDisplayed());
     }

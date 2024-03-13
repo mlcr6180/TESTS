@@ -1,7 +1,7 @@
-package com.test.ec.definitions;
+package com.test.ec.definitions.login;
 
-import com.test.ec.steps.login.BancaOficialLoginStep;
-import com.test.ec.steps.validations.BancaOficialValidationStep;
+import com.test.ec.steps.login.EstructurasControlLoginStep;
+import com.test.ec.steps.validations.EstructurasControlValidationStep;
 import com.test.ec.utilities.sslCertificate.SSLCertified;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 import org.junit.Assert;
 
-public class BancaOficialLoginDef {
+public class EstructurasControlLoginDef {
     @Steps(shared = true)
     WebSite url;
 
@@ -18,36 +18,37 @@ public class BancaOficialLoginDef {
     SSLCertified cSSL;
 
     @Steps(shared = true)
-    BancaOficialLoginStep login;
+    EstructurasControlLoginStep login;
 
     @Steps(shared = true)
-    BancaOficialValidationStep validate;
+    EstructurasControlValidationStep validate;
 
-    @Given("El usuario navega al sitio web de Banca Oficial")
+    @Given("El usuario navega al sitio web de Estructuras Control")
     public void userNavegateTo() {
-        url.navegateTo("http://172.20.41.61/BancaOficialCom/Login.aspx");
+        url.navegateTo("https://172.20.41.84:8443/EstructurasControlBGR/Login/Login.aspx");
+        cSSL.certificateSSL();
     }
 
-    @When("Ingresa credenciales correctas de Banca Oficial")
+    @When("Ingresa credenciales correctas de Estructuras Control")
     public void userLoginWithValidCredentials() {
         login.typeUsername("jamaldon");
         login.typePassword("jmaldon9");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar el modulo principal de Banca Oficial")
+    @Then("La aplicacion deberia mostrar el modulo principal de Estructuras Control")
     public void systemShowProductsModule() {
         Assert.assertTrue(validate.titleIsVisible());
     }
 
-    @When("Ingresa credenciales incorrectas de Banca Oficial")
+    @When("Ingresa credenciales incorrectas de Estructuras Control")
     public void userLoginWithInvalidCredentials() {
         login.typeUsername("jamaldon");
         login.typePassword("123456");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar un mensaje de error de Banca Oficial")
+    @Then("La aplicacion deberia mostrar un mensaje de error de Estructuras Control")
     public void systemShowErrorMessage() {
         Assert.assertTrue(validate.errorMessageIsDisplayed());
     }

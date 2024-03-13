@@ -1,7 +1,7 @@
-package com.test.ec.definitions;
+package com.test.ec.definitions.login;
 
-import com.test.ec.steps.login.BIZAGILoginStep;
-import com.test.ec.steps.validations.BIZAGIValidationStep;
+import com.test.ec.steps.login.BancaDigitalLoginStep;
+import com.test.ec.steps.validations.BancaDigitalValidationStep;
 import com.test.ec.utilities.sslCertificate.SSLCertified;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 import org.junit.Assert;
 
-public class BIZAGILoginDef {
+public class BancaDigitalLoginDef {
     @Steps(shared = true)
     WebSite url;
 
@@ -18,37 +18,36 @@ public class BIZAGILoginDef {
     SSLCertified cSSL;
 
     @Steps(shared = true)
-    BIZAGILoginStep login;
+    BancaDigitalLoginStep login;
 
     @Steps(shared = true)
-    BIZAGIValidationStep validate;
+    BancaDigitalValidationStep validate;
 
-    @Given("El usuario navega al sitio web de BIZAGI")
-    public void userNavegateTo() {
-        url.navegateTo("https://172.20.41.101:4433/BPMBGRT/");
-        cSSL.certificateSSL();
+    @Given("El usuario navega al sitio web de Banca Digital")
+    public void userNavigateTo() {
+        url.navegateTo("https://bd-test.bgr.ec/");
     }
 
-    @When("Ingresa credenciales correctas de BIZAGI")
+    @When("Ingresa credenciales correctas de Banca Digital")
     public void userLoginWithValidCredentials() {
-        login.typeUsername("jamaldon");
-        login.typePassword("jmaldon9");
+        login.typeUsername("jahaira2000");
+        login.typePassword("Consultec22.");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar el modulo principal de BIZAGI")
+    @Then("La aplicacion deberia mostrar el modulo principal de Banca Digital")
     public void systemShowProductsModule() {
         Assert.assertTrue(validate.titleIsVisible());
     }
 
-    @When("Ingresa credenciales incorrectas de BIZAGI")
+    @When("Ingresa credenciales incorrectas de Banca Digital")
     public void userLoginWithInvalidCredentials() {
-        login.typeUsername("jamaldon");
+        login.typeUsername("jahaira2000");
         login.typePassword("123456");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar un mensaje de error de BIZAGI")
+    @Then("La aplicacion deberia mostrar un mensaje de error de Banca Digital")
     public void systemShowErrorMessage() {
         Assert.assertTrue(validate.errorMessageIsDisplayed());
     }
