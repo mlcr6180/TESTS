@@ -1,4 +1,4 @@
-@Suite @LoginAdministradorPagos
+@SuiteOk @LoginAdministradorPagos
 Feature: CP03.1 - Automatizacion pruebas - Administrador Pagos
   Background: Validar el inicio de sesion a la pagina de Administrador Pagos
     Given El usuario navega al sitio web de Administrador Pagos

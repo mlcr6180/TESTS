@@ -1,4 +1,4 @@
-@Suite @LoginCuadreYCompensacion
+@SuiteOk @LoginCuadreYCompensacion
 Feature: CP12.1 - Automatizacion pruebas - Cuadre y Compensacion
   Background: Validar el inicio de sesion a la pagina de Cuadre y Compensacion
     Given El usuario navega al sitio web de Cuadre y Compensacion

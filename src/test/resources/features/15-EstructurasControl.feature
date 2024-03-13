@@ -1,4 +1,4 @@
-@Suite @LoginEstructurasControl
+@SuiteOk @LoginEstructurasControl
 Feature: CP15.1 - Automatizacion pruebas - Estructuras Control
   Background: Validar el inicio de sesion a la pagina de Estructuras Control
     Given El usuario navega al sitio web de Estructuras Control

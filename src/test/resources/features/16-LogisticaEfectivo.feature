@@ -1,4 +1,4 @@
-@Suite @LoginLogisticaEfectivo
+@SuiteOk @LoginLogisticaEfectivo
 Feature: CP18.1 - Automatizacion pruebas - Logistica Efectivo
   Background: Validar el inicio de sesion a la pagina de Logistica Efectivo
     Given El usuario navega al sitio web de Logistica Efectivo

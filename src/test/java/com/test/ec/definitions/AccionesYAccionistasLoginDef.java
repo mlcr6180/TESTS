@@ -23,16 +23,16 @@ public class AccionesYAccionistasLoginDef {
     @Steps(shared = true)
     AccionesYAccionistasValidationStep validate;
 
-    @Given("El usuario navega al sitio web")
-    public void userNavigateTo() {
+    @Given("El usuario navega al sitio web de Acciones y Accionistas")
+    public void userNavegateTo() {
         url.navegateTo("https://172.20.41.84:8443/AccionesAccionistasBGR/Login/Login.aspx");
         cSSL.certificateSSL();
     }
 
-    @When("Ingresa credenciales correctas")
+    @When("Ingresa credenciales correctas de Acciones y Accionistas")
     public void userLoginWithValidCredentials() {
-        login.typeUsername("jmeras");
-        login.typePassword("Banco10");
+        login.typeUsername("jamaldon");
+        login.typePassword("jmaldon9");
         login.clickLogin();
     }
 
@@ -41,14 +41,14 @@ public class AccionesYAccionistasLoginDef {
         Assert.assertTrue(validate.titleIsVisible());
     }
 
-    @When("Ingresa credenciales incorrectas")
+    @When("Ingresa credenciales incorrectas de Acciones y Accionistas")
     public void userLoginWithInvalidCredentials() {
-        login.typeUsername("jmeras");
+        login.typeUsername("jamaldon");
         login.typePassword("123456");
         login.clickLogin();
     }
 
-    @Then("La aplicacion deberia mostrar un mensaje de error")
+    @Then("La aplicacion deberia mostrar un mensaje de error de Acciones y Accionistas")
     public void systemShowErrorMessage() {
         Assert.assertTrue(validate.errorMessageIsDisplayed());
     }

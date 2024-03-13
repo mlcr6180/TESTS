@@ -1,4 +1,4 @@
-@Suite @LoginAdministracionBancaDigital
+@SuiteOk @LoginAdministracionBancaDigital
 Feature: CP02.1 - Automatizacion pruebas - Administracion Banca Digital
   Background: Validar el inicio de sesion a la pagina de Administracion Banca Digital
     Given El usuario navega al sitio web de Administracion Banca Digital

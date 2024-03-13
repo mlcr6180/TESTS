@@ -1,4 +1,4 @@
-@Suite @LoginCapturaRemota
+@SuiteOk @LoginCapturaRemota
 Feature: CP09.1 - Automatizacion pruebas - Captura Remota
   Background: Validar el inicio de sesion a la pagina de Captura Remota
     Given El usuario navega al sitio web de Captura Remota

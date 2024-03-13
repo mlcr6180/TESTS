@@ -11,6 +11,6 @@ public class CapturaRemotaLoginPage extends PageObject {
     @FindBy(id = "ASPxRoundPanel1_ASPxFormLayout1_txtClave_I")
     protected WebElementFacade txt_password;
 
-    @FindBy(id = "ASPxRoundPanel1_ASPxFormLayout1_cmdIngresar_I")
+    @FindBy(id = "ASPxRoundPanel1_ASPxFormLayout1_cmdIngresar")
     protected WebElementFacade btn_login;
 }

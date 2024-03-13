@@ -1,4 +1,4 @@
-@Suite @LoginEditorSwift
+@SuiteOk @LoginEditorSwift
 Feature: CP14.1 - Automatizacion pruebas - Editor Swift
   Background: Validar el inicio de sesion a la pagina de Editor Swift
     Given El usuario navega al sitio web de Editor Swift

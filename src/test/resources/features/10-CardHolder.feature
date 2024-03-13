@@ -1,4 +1,4 @@
-@Suite @LoginCardHolder
+@SuiteOk @LoginCardHolder
 Feature: CP10.1 - Automatizacion pruebas - Card Holder
   Background: Validar el inicio de sesion a la pagina de Card Holder
     Given El usuario navega al sitio web de Card Holder

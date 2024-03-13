@@ -1,4 +1,4 @@
-@Suite @LoginAsesores
+@SuiteOk @LoginAsesores
 Feature: CP04.1 - Automatizacion pruebas - Asesores
   Background: Validar el inicio de sesion a la pagina de Asesores
     Given El usuario navega al sitio web de Asesores
