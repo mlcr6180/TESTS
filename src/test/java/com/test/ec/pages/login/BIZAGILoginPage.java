@@ -5,12 +5,12 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
 public class BIZAGILoginPage extends PageObject {
-    @FindBy(id = "user")
+    @FindBy(xpath = "//input[@class='input-field']")
     protected WebElementFacade txt_username;
 
-    @FindBy(id = "password")
+    @FindBy(xpath = "//input[@class='input-field input-field--icon_right']")
     protected WebElementFacade txt_password;
 
-    @FindBy(id = "btn-login")
+    @FindBy(xpath = "//button[@class='button button-primary']")
     protected WebElementFacade btn_login;
 }

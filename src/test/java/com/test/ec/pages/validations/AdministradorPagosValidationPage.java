@@ -10,4 +10,7 @@ public class AdministradorPagosValidationPage extends PageObject {
 
     @FindBy(xpath = "//span[contains(@class, 'fa fa-lock')]")
     protected WebElementFacade lbl_errorMessage;
+
+    @FindBy(id = "txtUsuario")
+    protected WebElementFacade txt_username;
 }

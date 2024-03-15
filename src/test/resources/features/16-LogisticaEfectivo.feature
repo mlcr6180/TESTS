@@ -7,6 +7,8 @@ Feature: CP18.1 - Automatizacion pruebas - Logistica Efectivo
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Logistica Efectivo
     Then La aplicacion deberia mostrar el modulo principal de Logistica Efectivo
+     And El usuario cierra sesion de Logistica Efectivo
+    Then Se muestra la pantalla de iniciar sesion de Logistica Efectivo
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

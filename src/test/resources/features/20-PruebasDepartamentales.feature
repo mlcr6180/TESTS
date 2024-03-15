@@ -7,6 +7,8 @@ Feature: CP22.1 - Automatizacion pruebas - Pruebas Departamentales
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Pruebas Departamentales
     Then La aplicacion deberia mostrar el modulo principal de Pruebas Departamentales
+     And El usuario cierra sesion de Pruebas Departamentales
+    Then Se muestra la pantalla de iniciar sesion de Pruebas Departamentales
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

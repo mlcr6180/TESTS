@@ -7,6 +7,8 @@ Feature: CP25.1 - Automatizacion pruebas - Riesgo Global
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Riesgo Global
     Then La aplicacion deberia mostrar el modulo principal de Riesgo Global
+     And El usuario cierra sesion de Riesgo Global
+    Then Se muestra la pantalla de iniciar sesion de Riesgo Global
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

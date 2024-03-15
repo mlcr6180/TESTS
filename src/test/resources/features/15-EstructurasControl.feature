@@ -7,6 +7,8 @@ Feature: CP15.1 - Automatizacion pruebas - Estructuras Control
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Estructuras Control
     Then La aplicacion deberia mostrar el modulo principal de Estructuras Control
+     And El usuario cierra sesion de Estructuras Control
+    Then Se muestra la pantalla de iniciar sesion de Estructuras Control
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

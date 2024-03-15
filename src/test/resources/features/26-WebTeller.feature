@@ -7,6 +7,8 @@ Feature: CP28.1 - Automatizacion pruebas - WebTeller
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de WebTeller
     Then La aplicacion deberia mostrar el modulo principal de WebTeller
+     And El usuario cierra sesion de WebTeller
+    Then Se muestra la pantalla de iniciar sesion de WebTeller
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

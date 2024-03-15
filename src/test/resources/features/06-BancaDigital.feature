@@ -7,6 +7,8 @@ Feature: CP06.1 - Automatizacion pruebas - BancaDigital
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Banca Digital
     Then La aplicacion deberia mostrar el modulo principal de Banca Digital
+     And El usuario cierra sesion de Banca Digital
+    Then Se muestra la pantalla de iniciar sesion de Banca Digital
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

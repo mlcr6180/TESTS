@@ -7,6 +7,8 @@ Feature: CP19.1 - Automatizacion pruebas - MICCS
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de MICCS
     Then La aplicacion deberia mostrar el modulo principal de MICCS
+     And El usuario cierra sesion de MICCS
+    Then Se muestra la pantalla de iniciar sesion de MICCS
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

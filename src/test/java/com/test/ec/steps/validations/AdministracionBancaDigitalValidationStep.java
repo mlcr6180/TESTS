@@ -13,4 +13,9 @@ public class AdministracionBancaDigitalValidationStep extends AdministracionBanc
     public Boolean errorMessageIsDisplayed() {
         return lbl_errorMessage.isDisplayed();
     }
+
+    @Step("Validar visualizacion boton Iniciar Sesion")
+    public Boolean botonIsVisible() {
+        return btn_iniciarSesion.isDisplayed();
+    }
 }

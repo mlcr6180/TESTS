@@ -7,6 +7,8 @@ Feature: CP14.1 - Automatizacion pruebas - Editor Swift
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Editor Swift
     Then La aplicacion deberia mostrar el modulo principal de Editor Swift
+     And El usuario cierra sesion de Editor Swift
+    Then Se muestra la pantalla de iniciar sesion de Editor Swift
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

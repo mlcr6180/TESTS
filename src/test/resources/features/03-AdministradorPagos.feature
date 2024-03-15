@@ -7,6 +7,8 @@ Feature: CP03.1 - Automatizacion pruebas - Administrador Pagos
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Administrador Pagos
     Then La aplicacion deberia mostrar el modulo principal de Administrador Pagos
+     And El usuario cierra sesion de Administrador Pagos
+    Then Se muestra la pantalla de iniciar sesion de Administrador Pagos
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

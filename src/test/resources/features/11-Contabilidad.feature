@@ -7,6 +7,8 @@ Feature: CP11.1 - Automatizacion pruebas - Contabilidad
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Contabilidad
     Then La aplicacion deberia mostrar el modulo principal de Contabilidad
+     And El usuario cierra sesion de Contabilidad
+    Then Se muestra la pantalla de iniciar sesion de Contabilidad
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

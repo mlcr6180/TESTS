@@ -32,7 +32,7 @@ public class BIZAGILoginDef {
     @When("Ingresa credenciales correctas de BIZAGI")
     public void userLoginWithValidCredentials() {
         login.typeUsername("jamaldon");
-        login.typePassword("jmaldon9");
+        login.typePassword("Ruminahui0324*");
         login.clickLogin();
     }
 

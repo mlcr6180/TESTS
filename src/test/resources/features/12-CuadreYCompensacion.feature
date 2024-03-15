@@ -7,6 +7,8 @@ Feature: CP12.1 - Automatizacion pruebas - Cuadre y Compensacion
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Cuadre y Compensacion
     Then La aplicacion deberia mostrar el modulo principal de Cuadre y Compensacion
+     And El usuario cierra sesion de Cuadre y Compensacion
+    Then Se muestra la pantalla de iniciar sesion de Cuadre y Compensacion
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

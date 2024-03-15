@@ -7,6 +7,8 @@ Feature: CP02.1 - Automatizacion pruebas - Administracion Banca Digital
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Administracion Banca Digital
     Then La aplicacion deberia mostrar el modulo principal de Administracion Banca Digital
+     And El usuario cierra sesion de Administracion Banca Digital
+    Then Se muestra la pantalla con el boton de iniciar sesion de Administracion Banca Digital
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

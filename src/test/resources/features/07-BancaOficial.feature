@@ -7,6 +7,8 @@ Feature: CP07.1 - Automatizacion pruebas - Banca Oficial
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Banca Oficial
     Then La aplicacion deberia mostrar el modulo principal de Banca Oficial
+     And El usuario cierra sesion de Banca Oficial
+    Then Se muestra la pantalla de iniciar sesion de Banca Oficial
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

@@ -7,6 +7,8 @@ Feature: CP20.1 - Automatizacion pruebas - Operaciones
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Operaciones
     Then La aplicacion deberia mostrar el modulo principal de Operaciones
+     And El usuario cierra sesion de Operaciones
+    Then Se muestra la pantalla de iniciar sesion de Operaciones
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

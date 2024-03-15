@@ -10,4 +10,7 @@ public class AdministracionBancaDigitalValidationPage extends PageObject {
 
     @FindBy(xpath = "//button[@type='submit']")
     protected WebElementFacade lbl_errorMessage;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary ob-primary btn-block']")
+    protected WebElementFacade btn_iniciarSesion;
 }

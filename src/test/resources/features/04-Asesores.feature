@@ -7,6 +7,8 @@ Feature: CP04.1 - Automatizacion pruebas - Asesores
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Asesores
     Then La aplicacion deberia mostrar el modulo principal de Asesores
+     And El usuario cierra sesion de Asesores
+    Then Se muestra la pantalla de iniciar sesion de Asesores
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

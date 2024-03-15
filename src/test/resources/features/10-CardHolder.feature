@@ -7,6 +7,8 @@ Feature: CP10.1 - Automatizacion pruebas - Card Holder
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Card Holder
     Then La aplicacion deberia mostrar el modulo principal de Card Holder
+     And El usuario cierra sesion de Card Holder
+    Then Se muestra la pantalla de iniciar sesion de Card Holder
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

@@ -17,4 +17,7 @@ public class AsesoresValidationPage extends PageObject {
             return false;
         }
     }
+
+    @FindBy(id = "Login1_TBUsuario")
+    protected WebElementFacade txt_username;
 }

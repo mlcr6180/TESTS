@@ -7,6 +7,8 @@ Feature: CP27.1 - Automatizacion pruebas - Solicitud Tarjetas Credito
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Solicitud Tarjetas Credito
     Then La aplicacion deberia mostrar el modulo principal de Solicitud Tarjetas Credito
+     And El usuario cierra sesion de Solicitud Tarjetas Credito
+    Then Se muestra la pantalla de iniciar sesion de Solicitud Tarjetas Credito
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas

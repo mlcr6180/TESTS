@@ -7,6 +7,8 @@ Feature: CP23.1 - Automatizacion pruebas - Reclamos y Requerimientos
   Scenario: 1 - Validar con credenciales correctas
     When Ingresa credenciales correctas de Reclamos y Requerimientos
     Then La aplicacion deberia mostrar el modulo principal de Reclamos y Requerimientos
+     And El usuario cierra sesion de Reclamos y Requerimientos
+    Then Se muestra la pantalla de iniciar sesion de Reclamos y Requerimientos
 
   @IncorrectCredentials
   Scenario: 2 - Validar con credenciales incorrectas
