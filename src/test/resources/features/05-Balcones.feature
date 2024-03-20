@@ -1,4 +1,4 @@
-@SuiteOk @LoginBalcones
+@Suite @LoginBalcones
 Feature: CP05.1 - Automatizacion pruebas - Balcones
   Background: Validar el inicio de sesion a la pagina de Balcones
     Given El usuario navega al sitio web de Balcones

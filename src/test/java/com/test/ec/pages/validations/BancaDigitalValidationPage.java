@@ -10,4 +10,7 @@ public class BancaDigitalValidationPage extends PageObject {
 
     @FindBy(xpath = "//span[@class='alert-text']")
     protected WebElementFacade lbl_errorMessage;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary ob-primary btn-block']")
+    protected WebElementFacade btn_iniciarSesion;
 }

@@ -8,6 +8,9 @@ public class CapturaRemotaValidationPage extends PageObject {
     @FindBy(xpath = "//span[text()='Salir']")
     protected WebElementFacade lbl_product;
 
-    @FindBy(xpath = "//span[text()=\"Datos ingresados incorrectos. S01\"]")
+    @FindBy(xpath = "//span[text()='Usuario o contraseña inválida.']")
     protected WebElementFacade lbl_errorMessage;
+
+    @FindBy(id = "ASPxRoundPanel1_ASPxFormLayout1_txtUsuario_I")
+    protected WebElementFacade txt_username;
 }

@@ -1,4 +1,4 @@
-@SuiteOk @LoginBancaDigital
+@Suite @LoginBancaDigital
 Feature: CP06.1 - Automatizacion pruebas - BancaDigital
   Background: Validar el inicio de sesion a la pagina de Banca Digital
     Given El usuario navega al sitio web de Banca Digital

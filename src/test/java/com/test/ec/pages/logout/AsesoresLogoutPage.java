@@ -8,6 +8,6 @@ public class AsesoresLogoutPage extends PageObject {
     @FindBy(xpath = "//frame[@src='header.aspx']")
     protected WebElementFacade frame_header;
 
-    @FindBy(xpath = "//a[@class='Login.aspx']")
+    @FindBy(xpath = "//a[@href='Login.aspx']")
     protected WebElementFacade btn_cerrarSesion;
 }

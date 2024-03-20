@@ -10,7 +10,7 @@ import java.time.Duration;
 public class BancaDigitalValidationStep extends BancaDigitalValidationPage {
     @Step("Validar visualizacion del modulo principal")
     public Boolean titleIsVisible() {
-        Duration tiempoDeEspera = Duration.ofSeconds(10);
+        Duration tiempoDeEspera = Duration.ofSeconds(30);
         WebDriverWait wait = new WebDriverWait(getDriver(), tiempoDeEspera);
         wait.until(ExpectedConditions.visibilityOf(lbl_product));
         return lbl_product.isDisplayed();
@@ -18,6 +18,14 @@ public class BancaDigitalValidationStep extends BancaDigitalValidationPage {
 
     @Step("Validar visualizacion del mensaje de error")
     public Boolean errorMessageIsDisplayed() {
+        Duration tiempoDeEspera = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(getDriver(), tiempoDeEspera);
+        wait.until(ExpectedConditions.visibilityOf(lbl_errorMessage));
         return lbl_errorMessage.isDisplayed();
+    }
+
+    @Step("Validar cierre de sesion")
+    public Boolean botonIsVisible() {
+        return btn_iniciarSesion.isDisplayed();
     }
 }

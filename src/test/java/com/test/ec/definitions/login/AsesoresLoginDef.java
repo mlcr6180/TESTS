@@ -50,7 +50,7 @@ public class AsesoresLoginDef {
 
     @When("El usuario cierra sesion de Asesores")
     public void userLogout() {
-        logout.seleccionarFrameHeader();
+        logout.selectFrameHeader();
         logout.clickCerrarSesion();
     }
 

@@ -17,4 +17,7 @@ public class CardHolderValidationPage extends PageObject {
             return false;
         }
     }
+
+    @FindBy(id = "txtUsuario")
+    protected WebElementFacade txt_username;
 }

@@ -17,4 +17,7 @@ public class ContabilidadValidationPage extends PageObject {
             return false;
         }
     }
+
+    @FindBy(id = "TBUsuario")
+    protected WebElementFacade txt_username;
 }

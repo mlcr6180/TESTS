@@ -20,4 +20,9 @@ public class CuadreYCompensacionValidationStep extends CuadreYCompensacionValida
     public Boolean errorMessageIsDisplayed() {
         return lbl_errorMessage.isDisplayed();
     }
+
+    @Step("Validar cierre de sesion")
+    public Boolean txt_usernameIsVisible() {
+        return txt_username.isDisplayed();
+    }
 }

@@ -27,7 +27,7 @@ public class CredencialesCorrectas {
         credentialsMap.put("jahaira2000", credentials4);
 
         List<String> credentials5 = new ArrayList<>();
-        credentials5.add("banco.BGR001");
+        credentials5.add("banco*BGR001");
         credentialsMap.put("MASGAS1", credentials5);
     }
 

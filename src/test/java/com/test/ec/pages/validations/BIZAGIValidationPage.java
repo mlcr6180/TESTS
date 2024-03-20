@@ -10,4 +10,7 @@ public class BIZAGIValidationPage extends PageObject {
 
     @FindBy(xpath = "//p[@class='secondary-data']")
     protected WebElementFacade lbl_errorMessage;
+
+    @FindBy(xpath = "//input[@class='input-field']")
+    protected WebElementFacade txt_username;
 }

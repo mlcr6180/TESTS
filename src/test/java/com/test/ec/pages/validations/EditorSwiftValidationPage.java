@@ -10,4 +10,7 @@ public class EditorSwiftValidationPage extends PageObject {
 
     @FindBy(xpath = "//li[contains(@class, 'text-black') and contains(text(), 'PASSWORD INCORRECTO')]")
     protected WebElementFacade lbl_errorMessage;
+
+    @FindBy(id = "txtUsuario")
+    protected WebElementFacade txt_username;
 }

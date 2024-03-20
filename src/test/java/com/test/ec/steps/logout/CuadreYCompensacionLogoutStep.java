@@ -1,9 +1,9 @@
 package com.test.ec.steps.logout;
 
-import com.test.ec.pages.logout.AccionesYAccionistasLogoutPage;
+import com.test.ec.pages.logout.CuadreYCompensacionLogoutPage;
 import net.serenitybdd.annotations.Step;
 
-public class AccionesYAccionistasLogoutStep extends AccionesYAccionistasLogoutPage {
+public class CuadreYCompensacionLogoutStep extends CuadreYCompensacionLogoutPage {
     @Step("Click en el boton de cerrar sesion")
     public void clickCerrarSesion() {
         btn_logout.click();
