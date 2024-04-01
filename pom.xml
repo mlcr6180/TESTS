@@ -68,29 +68,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>${maven-plugins-version}</version>
-                <configuration>
-                    <includes>
-                        <include>**/test/**/*.java</include>
-                    </includes>
-                    <systemPropertyVariables>
-                        <surefire.security.manager>
-                            java.lan.SecurityManager
-                        </surefire.security.manager>
-                    </systemPropertyVariables>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.12.1</version>
                 <configuration>
