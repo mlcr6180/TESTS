@@ -17,4 +17,7 @@ public class BalconesValidationPage extends PageObject {
             return false;
         }
     }
+
+    @FindBy(id = "Login2_TBUsuario")
+    protected WebElementFacade txt_username;
 }

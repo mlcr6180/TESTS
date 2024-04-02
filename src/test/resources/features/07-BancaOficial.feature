@@ -1,4 +1,4 @@
-@Suite @LoginBancaOficial
+@SuiteOk @LoginBancaOficial
 Feature: CP07.1 - Automatizacion pruebas - Banca Oficial
   Background: Validar el inicio de sesion a la pagina de Banca Oficial
     Given El usuario navega al sitio web de Banca Oficial

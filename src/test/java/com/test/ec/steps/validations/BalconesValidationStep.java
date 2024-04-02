@@ -13,4 +13,9 @@ public class BalconesValidationStep extends BalconesValidationPage {
     public Boolean errorMessageIsDisplayed() {
         return isAlertPresent();
     }
+
+    @Step("Validar cierre de sesion")
+    public Boolean txt_usernameIsVisible() {
+        return txt_username.isDisplayed();
+    }
 }

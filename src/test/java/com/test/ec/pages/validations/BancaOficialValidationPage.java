@@ -10,4 +10,7 @@ public class BancaOficialValidationPage extends PageObject {
 
     @FindBy(xpath = "//span[@id='lblMensaje']")
     protected WebElementFacade lbl_errorMessage;
+
+    @FindBy(id = "txtUsuario")
+    protected WebElementFacade txt_username;
 }
