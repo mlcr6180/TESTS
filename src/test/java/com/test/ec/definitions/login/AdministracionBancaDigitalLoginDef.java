@@ -5,7 +5,6 @@ import com.test.ec.steps.logout.AdministracionBancaDigitalLogoutStep;
 import com.test.ec.steps.validations.AdministracionBancaDigitalValidationStep;
 import com.test.ec.utilities.credenciales.CredencialesCorrectas;
 import com.test.ec.utilities.credenciales.CredencialesIncorrectas;
-import com.test.ec.utilities.sslCertificate.SSLCertified;
 import com.test.ec.utilities.website.WebSite;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -52,7 +51,7 @@ public class AdministracionBancaDigitalLoginDef {
         logout.clickSalir();
     }
 
-    @Then("Se muestra la pantalla con el boton de iniciar sesion de Administracion Banca Digital")
+    @Then("Se muestra la pantalla de iniciar sesion de Administracion Banca Digital")
     public void systemShowLogin() {
         Assert.assertTrue(validate.botonIsVisible());
     }

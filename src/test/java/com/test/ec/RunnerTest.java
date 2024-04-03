@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com.test.ec.definitions",
-        tags = "@SuiteOk"
+        tags = "@CredencialesCorrectas or @CredencialesIncorrectas"
 )
 public class RunnerTest {
 }
